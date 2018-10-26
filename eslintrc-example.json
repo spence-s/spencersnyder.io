@@ -1,0 +1,45 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "extends": ["airbnb"],
+    "parserOptions": {
+        "ecmaVersion": 9,
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": ["react", "react-native"],
+    "rules": {
+        "consistent-return": "off",
+        "no-plusplus": "off",
+        "import/first": "off",
+        "react/jsx-filename-extension": "off",
+        "react/jsx-indent": "off",
+        "react/jsx-indent-props": "off",
+        "react/prop-types": "warn",
+        "react/require-default-props": "off",
+        "react/forbid-prop-types": "off",
+        "react/sort-comp": "off",
+        "indent": ["error", 4],
+        "linebreak-style": ["error", "unix"],
+        "semi": ["error", "always"],
+        "no-console": "off",
+        "no-param-reassign": ["error", { "props": false }],
+        "eqeqeq": "warn",
+        "arrow-parens": ["error", "as-needed"],
+        "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
+        "import/prefer-default-export": "off",
+        "no-nested-ternary": "off",
+        "no-return-assign": ["error", "except-parens"],
+        "class-methods-use-this": "off",
+        "no-bitwise": ["error", { "allow": ["~"] }],
+        "no-use-before-define": "off",
+        "max-len": "off"
+    }
+}
