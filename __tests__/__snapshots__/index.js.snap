@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it works 1`] = `
+.c0 {
+  display: inline-block;
+  min-width: 15em;
+  min-height: 3em;
+  margin: 0 1rem 0.3rem 0;
+  box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 2px solid purple;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c0:hover {
+  background-color: purple;
+  color: white;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+<button
+  class="c0"
+/>
+`;
