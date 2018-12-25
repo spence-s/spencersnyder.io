@@ -2,10 +2,15 @@ import 'react-testing-library/cleanup-after-each';
 import React from 'react';
 import { render } from 'react-testing-library';
 import Button from '../src/components/Button';
+import Header from '../src/components/header';
 import 'jest-styled-components';
 
-test('it works', () => {
+test('Button matches snapshot', () => {
   const { container } = render(<Button />);
-  // expect(container.firstChilc).toHaveStyleRule({display: 'inline-block'})
+  expect(container.firstChild).toMatchSnapshot();
+});
+
+test('Header matches snapshot', () => {
+  const { container } = render(<Header />);
   expect(container.firstChild).toMatchSnapshot();
 });

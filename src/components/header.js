@@ -19,7 +19,7 @@ const UList = styled.ul`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 5em;
+    height: 2em;
     margin: 0;
     padding: 0;
     cursor: pointer;
