@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Box } from 'grommet';
 
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 
 class About extends Component {
   render() {
