@@ -1,7 +1,6 @@
-// @flow
-
 import * as React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StyledButton = styled.button`
   display: inline-block;
@@ -24,5 +23,9 @@ const StyledButton = styled.button`
 `;
 
 const Button = ({ children, ...props }) => <StyledButton {...props}>{children}</StyledButton>;
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 export default Button;

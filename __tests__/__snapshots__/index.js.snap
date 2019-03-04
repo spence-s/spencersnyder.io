@@ -164,7 +164,7 @@ exports[`Header matches snapshot 1`] = `
     >
       <a
         class="c3 c4"
-        href="about"
+        href="/about"
       >
         <span
           class="c5"
@@ -192,7 +192,7 @@ exports[`Header matches snapshot 1`] = `
     >
       <a
         class="c3 c4"
-        href="portfolio"
+        href="/portfolio"
       >
         <span
           class="c5"
@@ -220,7 +220,7 @@ exports[`Header matches snapshot 1`] = `
     >
       <a
         class="c3 c4"
-        href="blog"
+        href="/blog"
       >
         <span
           class="c5"
