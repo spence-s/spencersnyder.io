@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Facebook, Linkedin, Instagram } from 'grommet-icons';
 
 import Layout from '../components/layout';
-import Button from '../components/button';
+import Button from '../components/Button';
 
 const PaddedDiv = styled.div`
   text-align: center;
