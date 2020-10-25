@@ -8,8 +8,60 @@
     "start": "next start"
   },
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "next": "9.5.5",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "17.0.1",
+    "react-tsparticles": "^1.18.6",
+    "sass": "^1.27.0",
+    "tsparticles": "^1.18.6"
+  },
+  "devDependencies": {
+    "xo": "^0.34.1",
+    "eslint-config-xo-react": "^0.23.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "trailingComma": "none",
+    "jsxBracketSameLine": true,
+    "jsxSingleQuote": true
+  },
+  "xo": {
+    "prettier": true,
+    "space": true,
+    "extends": [
+      "xo-react"
+    ],
+    "extensions": [
+      ".js",
+      ".jsx",
+      ".json",
+      ".md"
+    ],
+    "envs": [
+      "browser",
+      "node",
+      "es2021"
+    ],
+    "rules": {
+      "react/prop-types": "off",
+      "react/jsx-pascal-case": "off",
+      "camelcase": "off",
+      "promise/prefer-await-to-then": "off",
+      "unicorn/filename-case": "off",
+      "unicorn/prevent-abbreviations": "off",
+      "no-warning-comments": "off",
+      "import/no-unassigned-import": "off",
+      "import/extensions": "off",
+      "unicorn/no-reduce": "off",
+      "capitalized-comments": "off",
+      "react/state-in-constructor": "off",
+      "react/function-component-definition": "off",
+      "react/react-in-jsx-scope": "off"
+    }
   }
 }
