@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "pm2 deploy ecosystem.config.js production"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
@@ -18,10 +19,10 @@
     "tsparticles": "^1.18.6"
   },
   "devDependencies": {
-    "xo": "^0.34.1",
     "eslint-config-xo-react": "^0.23.0",
     "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "xo": "^0.34.1"
   },
   "prettier": {
     "singleQuote": true,
