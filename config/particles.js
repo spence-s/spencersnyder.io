@@ -9,7 +9,7 @@ export const options = {
       image: { src: 'img/github.svg', width: 100, height: 100 }
     },
     opacity: {
-      value: 0.1,
+      value: 0.6,
       random: true,
       anim: { enable: false, speed: 0, opacity_min: 0.1, sync: false }
     },

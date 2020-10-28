@@ -1,14 +1,26 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import '../node_modules/bootstrap/scss/bootstrap';
 
 .particle-bg {
   position: absolute;
   left: 0;
-  right: 0; 
-  top: 0; 
-  bottom: 0; 
+  right: 0;
+  top: 0;
+  bottom: 0;
   z-index: -100;
 }
 
-.vh-75{
+.h-35 {
+  height: 35% !important;
+}
+
+.vh-75 {
   height: 75vh !important;
+}
+
+.position-absolute,
+.position-relative {
+  &.rl-0 {
+    right: -5px;
+    left: -5px;
+  }
 }
