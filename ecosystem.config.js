@@ -7,7 +7,7 @@ module.exports = {
       script: './node_modules/.bin/next',
       args: 'start',
       exec_mode: 'cluster',
-      instances: '1',
+      instances: 'max',
       env: {
         NODE_ENV: 'development'
       },
