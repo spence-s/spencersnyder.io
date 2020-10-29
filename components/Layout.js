@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 export const Layout = ({ children }) => (
   <>
     <Particles id='tsparticles' className='particle-bg' options={options} />
-    <Navbar bg='dark' variant='dark' expand='lg'>
+    <Navbar bg='gradient-dark' variant='dark' expand='lg'>
       <Link passHref href='/'>
         <Navbar.Brand>SPENCER SNYDER</Navbar.Brand>
       </Link>
@@ -36,7 +36,7 @@ export const Layout = ({ children }) => (
           opacity: 1
         }
       }}>
-      <Container>{children}</Container>
+      <Container fluid>{children}</Container>
     </motion.div>
   </>
 );

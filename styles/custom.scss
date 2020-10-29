@@ -1,4 +1,6 @@
-@import '../node_modules/bootstrap/scss/bootstrap';
+@use 'sass:map';
+// Initial variable overrides
+@import 'bootstrap-override';
 
 .particle-bg {
   position: absolute;
@@ -7,10 +9,6 @@
   top: 0;
   bottom: 0;
   z-index: -100;
-}
-
-.h-35 {
-  height: 35% !important;
 }
 
 .vh-75 {
@@ -22,5 +20,18 @@
   &.rl-0 {
     right: -5px;
     left: -5px;
+  }
+}
+
+.post-link {
+  cursor: pointer;
+}
+
+// extend bootstrap diplay values
+@each $val, $font-size in $display-sizes {
+  .display-#{$val} {
+    @include font-size($font-size);
+    font-weight: map.get($display-weights, $val);
+    line-height: $display-line-height;
   }
 }
