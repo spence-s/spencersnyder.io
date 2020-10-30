@@ -1,10 +1,21 @@
+import { useEffect } from 'react';
+
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import { Layout } from 'components';
 import api from 'config/ghost-client';
+import Prism from 'prismjs';
 
-const post = (props) => {
+const Post = (props) => {
+  console.log(props);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      Prism.highlightAll();
+    }
+  }, []);
+
   return (
     <Layout>
       <Row className='position-absolute h-35 rl-0 border p-0 m-0 bg-dark' />
@@ -23,12 +34,14 @@ const post = (props) => {
   );
 };
 
-export default post;
+export default Post;
 
 export async function getStaticProps({ params: { slug } }) {
   const post = await api.posts.read({ slug });
+
   return {
-    props: post
+    props: post,
+    revalidate: 1
   };
 }
 
