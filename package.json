@@ -43,39 +43,5 @@
     "deploy": "pm2 deploy ecosystem.config.js production",
     "dev": "next dev",
     "start": "next start"
-  },
-  "xo": {
-    "prettier": true,
-    "space": true,
-    "extends": [
-      "xo-react"
-    ],
-    "extensions": [
-      ".js",
-      ".jsx",
-      ".json",
-      ".md"
-    ],
-    "envs": [
-      "browser",
-      "node",
-      "es2021"
-    ],
-    "rules": {
-      "react/prop-types": "off",
-      "react/jsx-pascal-case": "off",
-      "camelcase": "off",
-      "promise/prefer-await-to-then": "off",
-      "unicorn/filename-case": "off",
-      "unicorn/prevent-abbreviations": "off",
-      "no-warning-comments": "off",
-      "import/no-unassigned-import": "off",
-      "import/extensions": "off",
-      "unicorn/no-reduce": "off",
-      "capitalized-comments": "off",
-      "react/state-in-constructor": "off",
-      "react/function-component-definition": "off",
-      "react/react-in-jsx-scope": "off"
-    }
   }
 }

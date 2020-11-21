@@ -8,8 +8,6 @@ import api from 'config/ghost-client';
 import Prism from 'prismjs';
 
 const Post = (props) => {
-  console.log(props);
-
   useEffect(() => {
     if (typeof window !== 'undefined') {
       Prism.highlightAll();
