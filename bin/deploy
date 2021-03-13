@@ -1,0 +1,7 @@
+#!/bin/sh
+source /home/spencer/.zshrc
+git reset --hard HEAD
+git pull
+yarn
+yarn build
+pm2 startOrRestart all ecosystem.config.js --env production
