@@ -19,6 +19,7 @@
     "capitalized-comments": "off",
     "react/state-in-constructor": "off",
     "react/function-component-definition": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "node/file-extension-in-import": "off"
   }
 }
