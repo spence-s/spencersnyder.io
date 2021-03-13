@@ -43,8 +43,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "check-facts": "ansible web -m setup -i ./ansible/hosts.yml",
-    "deploy": "ansible-playbook ./ansible/deploy.yml -i ./ansible/hosts.yml",
+    "deploy": "pm2 deploy ecosystem.config.js production",
     "dev": "next dev -p 4000",
     "start": "next start"
   }
