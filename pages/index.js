@@ -4,20 +4,20 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 export default function Home() {
-  return (
-    <Layout>
-      <Row className='d-flex justify-content-center align-items-center vh-75'>
-        <Col xs={4}>
-          <Button variant='outline-dark' className='mx-2 btn-block'>
-            GITHUB
-          </Button>
-        </Col>
-        <Col xs={4}>
-          <Button variant='outline-dark' className='mx-2 btn-block'>
-            LINKEDIN
-          </Button>
-        </Col>
-      </Row>
-    </Layout>
-  );
+	return (
+		<Layout>
+			<Row className='d-flex justify-content-center align-items-center vh-75'>
+				<Col xs={4}>
+					<Button variant='outline-dark' className='mx-2 btn-block'>
+						GITHUB
+					</Button>
+				</Col>
+				<Col xs={4}>
+					<Button variant='outline-dark' className='mx-2 btn-block'>
+						LINKEDIN
+					</Button>
+				</Col>
+			</Row>
+		</Layout>
+	);
 }

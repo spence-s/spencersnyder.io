@@ -1,8 +1,5 @@
 module.exports = {
-  "*.md": [
-    filenames => filenames.map(filename => `prettier --write ${filename}`),
-    filenames => filenames.map(filename => `remark ${filename} -qfo`)
-  ],
+  "*.md": "prettier --write",
   'package.json': 'fixpack',
   '*.js': 'xo --fix'
 };
