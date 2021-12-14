@@ -9,21 +9,23 @@ import { options } from '../config/particles';
 export const Layout = ({ children }) => (
 	<>
 		<Particles id='tsparticles' className='particle-bg' options={options} />
-		<Navbar bg='gradient-dark' variant='dark' expand='lg'>
-			<Link passHref href='/'>
-				<Navbar.Brand>SPENCER SNYDER</Navbar.Brand>
-			</Link>
-			<Navbar.Toggle aria-controls='basic-navbar-nav' />
-			<Navbar.Collapse id='basic-navbar-nav' className='justify-content-end'>
-				<Nav>
-					<Link passHref href='/blog'>
-						<Nav.Link>BLOG</Nav.Link>
-					</Link>
-					<Link passHref href='/resume'>
-						<Nav.Link>RESUME</Nav.Link>
-					</Link>
-				</Nav>
-			</Navbar.Collapse>
+		<Navbar bg='dark' variant='dark' expand='lg'>
+			<Container fluid>
+				<Link passHref href='/'>
+					<Navbar.Brand>SPENCER SNYDER</Navbar.Brand>
+				</Link>
+				<Navbar.Toggle aria-controls='basic-navbar-nav' />
+				<Navbar.Collapse id='basic-navbar-nav' className='justify-content-end'>
+					<Nav>
+						<Link passHref href='/blog'>
+							<Nav.Link>BLOG</Nav.Link>
+						</Link>
+						<Link passHref href='/resume.pdf'>
+							<Nav.Link>RESUME</Nav.Link>
+						</Link>
+					</Nav>
+				</Navbar.Collapse>
+			</Container>
 		</Navbar>
 		<motion.div
 			initial='pageInitial'

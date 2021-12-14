@@ -1,5 +1,5 @@
 import '../styles/custom.scss';
-import 'prismjs/themes/prism-okaidia.css';
+import 'prism-themes/themes/prism-dracula.css';
 
 function MyApp({ Component, pageProps }) {
 	return <Component {...pageProps} />;

@@ -3,35 +3,30 @@
 @import 'bootstrap-override';
 
 .particle-bg {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -100;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -100;
 }
 
 .vh-75 {
-  height: 75vh !important;
+	height: 75vh !important;
 }
 
 .position-absolute,
 .position-relative {
-  &.rl-0 {
-    right: -5px;
-    left: -5px;
-  }
+	&.rl-0 {
+		right: -5px;
+		left: -5px;
+	}
 }
 
 .post-link {
-  cursor: pointer;
+	cursor: pointer;
 }
 
-// extend bootstrap diplay values
-@each $val, $font-size in $display-sizes {
-  .display-#{$val} {
-    @include font-size($font-size);
-    font-weight: map.get($display-weights, $val);
-    line-height: $display-line-height;
-  }
+.z-100 {
+	z-index: -100;
 }
