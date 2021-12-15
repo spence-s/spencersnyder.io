@@ -17,8 +17,5 @@ jobs:
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
           config: ${{ secrets.SSH_CONFIG }}
 
-      - name: Install PM2
-        run: npm install pm2
-
       - name: Deploy with PM2
         run: npx pm2 deploy ecosystem.config.js production
