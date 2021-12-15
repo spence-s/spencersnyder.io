@@ -7,7 +7,7 @@
 		"bootstrap": "5",
 		"cheerio": "^1.0.0-rc.10",
 		"date-fns": "^2.27.0",
-		"framer-motion": "^5.4.5",
+		"framer-motion": "^5.5.1",
 		"html-entities": "^2.3.2",
 		"is-string-and-not-blank": "^0.0.2",
 		"lodash": "^4.17.21",

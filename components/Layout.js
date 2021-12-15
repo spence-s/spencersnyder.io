@@ -27,18 +27,17 @@ export const Layout = ({ children }) => (
 				</Navbar.Collapse>
 			</Container>
 		</Navbar>
-		<motion.div
-			initial='pageInitial'
-			animate='pageAnimate'
+		<motion.main
+			initial='hidden'
+			animate='enter'
+			exit='exit'
+			transition={{ type: 'linear' }}
 			variants={{
-				pageInitial: {
-					opacity: 0
-				},
-				pageAnimate: {
-					opacity: 1
-				}
+				hidden: { opacity: 0 },
+				enter: { opacity: 1 },
+				exit: { opacity: 0 }
 			}}>
 			<Container fluid>{children}</Container>
-		</motion.div>
+		</motion.main>
 	</>
 );

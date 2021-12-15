@@ -1,4 +1,10 @@
 export const options = {
+	detectRetina: true,
+	fpsLimit: 90,
+	fullScreen: true,
+	background: {
+		color: '#fff'
+	},
 	particles: {
 		number: {
 			value: 15,
@@ -36,6 +42,5 @@ export const options = {
 				rotateY: 1200
 			}
 		}
-	},
-	retina_detect: true
+	}
 };

@@ -19,7 +19,7 @@ const Post = (props) => {
 					lg={8}
 					md={10}
 					xs={12}
-					className='bg-white p-5 mt-5 border rounded-sm'>
+					className='bg-white p-5 mt-5 border rounded'>
 					<h3 className='text-center mb-5'>{props.title}</h3>
 					{/* eslint-disable-next-line react/no-danger */}
 					<div dangerouslySetInnerHTML={{ __html: props.html }} />
