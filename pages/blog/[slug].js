@@ -12,7 +12,7 @@ import { decode } from 'html-entities';
 
 const Post = (props) => {
 	return (
-		<Layout>
+		<Layout title={props.title} description={props.excerpt}>
 			<Row className='position-absolute h-35 rl-0 bg-dark z-100' />
 			<Row className='d-flex justify-content-center align-items-center vh-75'>
 				<Col

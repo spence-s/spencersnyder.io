@@ -5,9 +5,11 @@ import Particles from 'react-tsparticles';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { options } from '../config/particles';
+import Header from './Header';
 
-export const Layout = ({ children }) => (
+export const Layout = ({ children, title, description }) => (
 	<>
+		<Header title={title} description={description} />
 		<Particles id='tsparticles' className='particle-bg' options={options} />
 		<Navbar bg='dark' variant='dark' expand='lg'>
 			<Container fluid>

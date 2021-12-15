@@ -31,7 +31,7 @@ const Blog = (props) => {
 	};
 
 	return (
-		<Layout>
+		<Layout title='Blog'>
 			<Row>
 				<Col xs={12} lg={1}>
 					<div className='mt-5'>Filters:</div>
