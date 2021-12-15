@@ -1,0 +1,24 @@
+name: PM2 Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          config: ${{ secrets.SSH_CONFIG }}
+
+      - name: Install PM2
+        run: npm install pm2
+
+      - name: Deploy with PM2
+        run: pm2 deploy ecosystem.config.js production
