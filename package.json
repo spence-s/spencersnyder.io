@@ -1,55 +1,55 @@
 {
-	"name": "spencersnyder.io",
-	"description": "My cool next and ghost based blog",
-	"version": "0.1.0",
-	"dependencies": {
-		"@tryghost/content-api": "^1.5.16",
-		"bootstrap": "5",
-		"cheerio": "^1.0.0-rc.10",
-		"date-fns": "^2.27.0",
-		"framer-motion": "^5.5.1",
-		"html-entities": "^2.3.2",
-		"is-string-and-not-blank": "^0.0.2",
-		"lodash": "^4.17.21",
-		"markdown-it": "^12.3.0",
-		"next": "12.0.7",
-		"next-seo": "^4.28.1",
-		"prism-themes": "^1.9.0",
-		"prismjs": "^1.25.0",
-		"react": "17.0.2",
-		"react-bootstrap": "^2.0.3",
-		"react-dom": "17.0.2",
-		"react-tsparticles": "^1.37.5",
-		"sass": "^1.45.0"
-	},
-	"devDependencies": {
-		"@commitlint/cli": "^15.0.0",
-		"@commitlint/config-conventional": "^15.0.0",
-		"ava": "^3.15.0",
-		"codecov": "^3.8.2",
-		"eslint-config-xo-react": "^0.25.0",
-		"eslint-plugin-react": "^7.27.1",
-		"eslint-plugin-react-hooks": "^4.3.0",
-		"fixpack": "^4.0.0",
-		"husky": "^7.0.4",
-		"lint-staged": "^12.1.2",
-		"nyc": "^15.1.0",
-		"prettier": "^2.5.1",
-		"xo": "^0.47.0"
-	},
-	"main": "pages/index.js",
-	"prettier": {
-		"singleQuote": true,
-		"bracketSpacing": true,
-		"trailingComma": "none",
-		"jsxBracketSameLine": true,
-		"jsxSingleQuote": true
-	},
-	"private": true,
-	"scripts": {
-		"build": "next build",
-		"deploy": "pm2 deploy ecosystem.config.js production",
-		"dev": "next dev -p 4000",
-		"start": "next start"
-	}
+  "name": "spencersnyder.io",
+  "description": "My cool next and ghost based blog",
+  "version": "0.1.0",
+  "dependencies": {
+    "@tryghost/content-api": "^1.5.16",
+    "bootstrap": "5",
+    "cheerio": "^1.0.0-rc.10",
+    "date-fns": "^2.28.0",
+    "framer-motion": "^5.5.6",
+    "html-entities": "^2.3.2",
+    "is-string-and-not-blank": "^0.0.2",
+    "lodash": "^4.17.21",
+    "markdown-it": "^12.3.2",
+    "next": "12.0.7",
+    "next-seo": "^4.28.1",
+    "prism-themes": "^1.9.0",
+    "prismjs": "^1.26.0",
+    "react": "17.0.2",
+    "react-bootstrap": "^2.1.0",
+    "react-dom": "17.0.2",
+    "react-tsparticles": "^1.39.0",
+    "sass": "^1.47.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.0.2",
+    "@commitlint/config-conventional": "^16.0.0",
+    "ava": "^4.0.1",
+    "codecov": "^3.8.2",
+    "eslint-config-xo-react": "^0.26.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "fixpack": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
+    "nyc": "^15.1.0",
+    "prettier": "^2.5.1",
+    "xo": "^0.47.0"
+  },
+  "main": "pages/index.js",
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "trailingComma": "none",
+    "jsxBracketSameLine": true,
+    "jsxSingleQuote": true
+  },
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "deploy": "pm2 deploy ecosystem.config.js production",
+    "dev": "next dev -p 4000",
+    "start": "next start"
+  }
 }
