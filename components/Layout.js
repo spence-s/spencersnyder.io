@@ -19,7 +19,7 @@ export const Layout = ({ children, title, description }) => (
 				<Navbar.Toggle aria-controls='basic-navbar-nav' />
 				<Navbar.Collapse id='basic-navbar-nav' className='justify-content-end'>
 					<Nav>
-						<Link passHref href='/blog'>
+						<Link passHref href='https://blog.spencersnyder.io'>
 							<Nav.Link>BLOG</Nav.Link>
 						</Link>
 						<Link passHref href='/resume.pdf'>
