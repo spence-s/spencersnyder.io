@@ -1,6 +1,5 @@
 // client imports
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import { Layout } from 'components';
 import api from 'config/ghost-client';
 
@@ -10,20 +9,19 @@ import loadLanguages from 'prismjs/components/index';
 import cheerio from 'cheerio';
 import { decode } from 'html-entities';
 
+import BlackBanner from 'components/Blog/BlackBanner';
+import Content from 'components/Blog/Content';
+import Title from 'components/Blog/Title';
+
 const Post = (props) => {
 	return (
 		<Layout title={props.title} description={props.excerpt}>
-			<Row className='position-absolute h-35 rl-0 bg-dark z-100' />
-			<Row className='d-flex justify-content-center align-items-center vh-75'>
-				<Col
-					lg={8}
-					md={10}
-					xs={12}
-					className='bg-white p-5 mt-5 border rounded'>
-					<h3 className='text-center mb-5'>{props.title}</h3>
-					{/* eslint-disable-next-line react/no-danger */}
-					<div dangerouslySetInnerHTML={{ __html: props.html }} />
-				</Col>
+			<BlackBanner />
+			<Row className='vh-75 d-flex justify-content-center'>
+				<Title title={props.title} />
+				<Row className='d-flex justify-content-center'>
+					<Content html={props.html} title={props.title} id={props.id} />
+				</Row>
 			</Row>
 		</Layout>
 	);

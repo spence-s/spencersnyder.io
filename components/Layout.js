@@ -12,14 +12,14 @@ export const Layout = ({ children, title, description }) => (
 		<Header title={title} description={description} />
 		<Particles id='tsparticles' className='particle-bg' options={options} />
 		<Navbar bg='dark' variant='dark' expand='lg'>
-			<Container fluid>
+			<Container fluid className='m-0'>
 				<Link passHref href='/'>
 					<Navbar.Brand>SPENCER SNYDER</Navbar.Brand>
 				</Link>
 				<Navbar.Toggle aria-controls='basic-navbar-nav' />
 				<Navbar.Collapse id='basic-navbar-nav' className='justify-content-end'>
 					<Nav>
-						<Link passHref href='https://blog.spencersnyder.io'>
+						<Link passHref href='/blog'>
 							<Nav.Link>BLOG</Nav.Link>
 						</Link>
 						<Link passHref href='/resume.pdf'>

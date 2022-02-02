@@ -1,18 +1,57 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Layout } from 'components';
 import api from 'config/ghost-client';
-import Link from 'next/link';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import format from 'date-fns/format';
-import differenceInDays from 'date-fns/differenceInDays';
 import isEmpty from 'lodash/isEmpty';
 import sortBy from 'lodash/sortBy';
 import MarkdownIt from 'markdown-it/lib';
 import isSANB from 'is-string-and-not-blank';
+import qs from 'querystringify';
+import { useRouter } from 'next/router';
+import slugify from 'slugify';
+import PostCard from 'components/Blog/PostCard';
+
+const formatUrlTag = (str = '') => slugify(str.toLowerCase());
 
 const Blog = (props) => {
 	const [filterTags, setFilterTags] = useState([]);
+	const router = useRouter();
+
+	useEffect(() => {
+		if (window?.location?.search) {
+			let { tags = [] } = qs.parse(window.location.search);
+			tags = (Array.isArray(tags) ? tags : tags.split(',')).map((tag) =>
+				formatUrlTag(tag)
+			);
+			const newTags =
+				tags.length > 0
+					? props.tags.filter((tag) => tags.includes(formatUrlTag(tag.name)))
+					: [];
+			setFilterTags(newTags);
+		}
+	}, [props.tags]);
+
+	useEffect(() => {
+		if (filterTags.length > 0) {
+			router.push(
+				qs.stringify(
+					{
+						tags: filterTags
+							.map((tag) => slugify(tag.name.toLowerCase()))
+							.join(',')
+					},
+					true
+				),
+				undefined,
+				{
+					shallow: true
+				}
+			);
+		} else {
+			router.push('/blog', undefined, { shallow: true });
+		}
+	}, [filterTags]);
 
 	const handleTagClick = (tag) => () => {
 		if (filterTags.some((t) => t.name === tag.name))
@@ -20,21 +59,11 @@ const Blog = (props) => {
 		else setFilterTags(filterTags.concat(tag));
 	};
 
-	const formatDate = (dateStr) => format(new Date(dateStr), 'M/d/yy');
-
-	const showUpdated = (post) => {
-		const daysBetweenPublishedAndUpdated = Math.abs(
-			differenceInDays(new Date(post.published_at), new Date(post.updated_at))
-		);
-
-		return daysBetweenPublishedAndUpdated > 30;
-	};
-
 	return (
 		<Layout title='Blog'>
 			<Row>
-				<Col xs={12} lg={1}>
-					<div className='mt-5'>Filters:</div>
+				<Col xs={12} md={2}>
+					<div className='mt-3'>Filters:</div>
 					{props.tags.map((tag) => {
 						const classNames = ['btn badge'];
 						if (filterTags.some((t) => t.name === tag.name))
@@ -42,13 +71,16 @@ const Blog = (props) => {
 						else classNames.push('bg-secondary');
 
 						return (
-							<div key={tag.id} onClick={handleTagClick(tag)}>
+							<div
+								key={tag.id}
+								className='float-start me-2 m2-md-0'
+								onClick={handleTagClick(tag)}>
 								<span className={classNames.join(' ')}>{tag.name}</span>
 							</div>
 						);
 					})}
 				</Col>
-				<Col xs={12} lg={11}>
+				<Col xs={12} md={10}>
 					{props.posts
 						.filter((post) =>
 							isEmpty(filterTags)
@@ -58,43 +90,7 @@ const Blog = (props) => {
 								  )
 						)
 						.map((post) => (
-							<div key={post.id} className='m-5 bg-white rounded p-3'>
-								<Row>
-									<Link key={post.id} href={`/blog/${post.slug}`}>
-										<Col xs={12} className='post-link h5'>
-											{post.title}
-										</Col>
-									</Link>
-									<Col xs={12} className='small text-muted'>
-										{showUpdated(post) ? (
-											<>
-												<div>
-													Originally Published:
-													{` ${formatDate(post.published_at)} `}
-												</div>
-												<div>
-													Last Updated:
-													{` ${formatDate(post.updated_at)} `}
-												</div>
-											</>
-										) : (
-											<div>Published: {formatDate(post.published_at)}</div>
-										)}
-									</Col>
-								</Row>
-								<Row className='justify-content-start align-items-start'>
-									<Link href={`/blog/${post.slug}`}>
-										<Col xs={10} className='post-link pt-3 w-75'>
-											<div
-												// eslint-disable-next-line react/no-danger
-												dangerouslySetInnerHTML={{
-													__html: post.excerpt
-												}}
-											/>
-										</Col>
-									</Link>
-								</Row>
-							</div>
+							<PostCard key={post.id} post={post} />
 						))}
 				</Col>
 			</Row>
