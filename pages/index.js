@@ -15,7 +15,7 @@ export default function Home() {
 	};
 
 	return (
-		<Layout>
+		<Layout title='spencersnyder.io'>
 			<Row className='d-flex justify-content-center align-items-center vh-75'>
 				<Col xs={4} className='d-grid gap-1'>
 					<Link passHref href='https://www.github.com/spence-s'>

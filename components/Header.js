@@ -46,6 +46,18 @@ export const Header = ({ title, description, ogTitle }) => {
 					description={description}
 					openGraph={{ title: ogTitle || title }}
 				/>
+				<link
+					rel='preload'
+					href='/fonts/DankMono-Regular.otf'
+					as='font'
+					crossOrigin=''
+				/>
+				<link
+					rel='preload'
+					href='/fonts/DankMono-Italic.otf'
+					as='font'
+					crossOrigin=''
+				/>
 			</Head>
 		</>
 	);
