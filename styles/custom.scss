@@ -30,3 +30,28 @@
 .z-100 {
 	z-index: -100;
 }
+
+@font-face {
+	font-family: 'DankMono';
+	src: url('/fonts/DankMono-Regular.otf');
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'DankMono';
+	src: url('/fonts/DankMono-Italic.otf');
+	font-style: italic;
+	font-weight: 500;
+	font-display: swap;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+	font-family: DankMono, $font-family-monospace;
+
+	span.comment {
+		font-style: italic;
+	}
+}
